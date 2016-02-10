@@ -1990,13 +1990,6 @@ at 27/07/2012 14:02:49</description>
 <instance part="R3" gate="R" x="223.52" y="121.92"/>
 </instances>
 <busses>
-<bus name="PB[0..7],_N">
-<segment>
-<wire x1="220.98" y1="139.7" x2="220.98" y2="157.48" width="0.762" layer="92"/>
-<wire x1="220.98" y1="157.48" x2="223.52" y2="157.48" width="0.762" layer="92"/>
-<wire x1="223.52" y1="157.48" x2="223.52" y2="139.7" width="0.762" layer="92"/>
-</segment>
-</bus>
 <bus name="B$1">
 <segment>
 <wire x1="215.9" y1="167.64" x2="228.6" y2="167.64" width="0.762" layer="92"/>
@@ -2126,12 +2119,22 @@ at 27/07/2012 14:02:49</description>
 <wire x1="68.58" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
 <label x="76.2" y="48.26" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB1(SCLK,PCINT1)"/>
+<pinref part="JUM2" gate="JUM" pin="2"/>
+<wire x1="215.9" y1="154.94" x2="228.6" y2="154.94" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="P_MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="MISO"/>
 <wire x1="68.58" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="91"/>
 <label x="76.2" y="45.72" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB3(PDO,MISO,PCINT3)"/>
+<pinref part="JUM2" gate="JUM" pin="4"/>
+<wire x1="215.9" y1="149.86" x2="228.6" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="P_MOSI" class="0">
@@ -2149,6 +2152,11 @@ at 27/07/2012 14:02:49</description>
 <pinref part="R1" gate="R" pin="2"/>
 <wire x1="43.18" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
 <label x="45.72" y="63.5" size="1.016" layer="95" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB2(PDI,MOSI,PCINT2)"/>
+<pinref part="JUM2" gate="JUM" pin="3"/>
+<wire x1="215.9" y1="152.4" x2="228.6" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V_P" class="0">
@@ -2326,86 +2334,6 @@ at 27/07/2012 14:02:49</description>
 <junction x="228.6" y="119.38"/>
 </segment>
 </net>
-<net name="PB4" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB4(T1,PCINT4)"/>
-<wire x1="215.9" y1="147.32" x2="220.98" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="5"/>
-<wire x1="228.6" y1="147.32" x2="223.52" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB5" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB5(PCINT5)"/>
-<wire x1="215.9" y1="144.78" x2="220.98" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="6"/>
-<wire x1="228.6" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB6" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB6(PCINT6)"/>
-<wire x1="215.9" y1="142.24" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="7"/>
-<wire x1="228.6" y1="142.24" x2="223.52" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB7" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB7(OC.0A,OC.1C,PCINT7)"/>
-<wire x1="215.9" y1="139.7" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="8"/>
-<wire x1="228.6" y1="139.7" x2="223.52" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB3" class="0">
-<segment>
-<pinref part="JUM2" gate="JUM" pin="4"/>
-<wire x1="228.6" y1="149.86" x2="223.52" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="A" pin="PB3(PDO,MISO,PCINT3)"/>
-<wire x1="215.9" y1="149.86" x2="220.98" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB0_N" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB0(!SS,PCINT0)"/>
-<wire x1="215.9" y1="157.48" x2="220.98" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="1"/>
-<wire x1="228.6" y1="157.48" x2="223.52" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB0_P" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB1(SCLK,PCINT1)"/>
-<wire x1="215.9" y1="154.94" x2="220.98" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="2"/>
-<wire x1="228.6" y1="154.94" x2="223.52" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB0_B" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB2(PDI,MOSI,PCINT2)"/>
-<wire x1="215.9" y1="152.4" x2="220.98" y2="152.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JUM2" gate="JUM" pin="3"/>
-<wire x1="228.6" y1="152.4" x2="223.52" y2="152.4" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="XTAL_N" class="0">
 <segment>
 <pinref part="C2" gate="C" pin="2"/>
@@ -2438,6 +2366,41 @@ at 27/07/2012 14:02:49</description>
 <pinref part="U1" gate="A" pin="XTAL2(PC0)"/>
 <wire x1="215.9" y1="134.62" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
 <label x="220.98" y="134.62" size="1.016" layer="95" ratio="10" xref="yes"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB0(!SS,PCINT0)"/>
+<pinref part="JUM2" gate="JUM" pin="1"/>
+<wire x1="215.9" y1="157.48" x2="228.6" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB4(T1,PCINT4)"/>
+<pinref part="JUM2" gate="JUM" pin="5"/>
+<wire x1="215.9" y1="147.32" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB5(PCINT5)"/>
+<pinref part="JUM2" gate="JUM" pin="6"/>
+<wire x1="215.9" y1="144.78" x2="228.6" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB6(PCINT6)"/>
+<pinref part="JUM2" gate="JUM" pin="7"/>
+<wire x1="215.9" y1="142.24" x2="228.6" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB7(OC.0A,OC.1C,PCINT7)"/>
+<pinref part="JUM2" gate="JUM" pin="8"/>
+<wire x1="215.9" y1="139.7" x2="228.6" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

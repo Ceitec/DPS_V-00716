@@ -2119,12 +2119,22 @@ at 27/07/2012 14:02:49</description>
 <wire x1="68.58" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
 <label x="76.2" y="48.26" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB1(SCLK,PCINT1)"/>
+<pinref part="JUM2" gate="JUM" pin="2"/>
+<wire x1="215.9" y1="154.94" x2="228.6" y2="154.94" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="P_MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="MISO"/>
 <wire x1="68.58" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="91"/>
 <label x="76.2" y="45.72" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB3(PDO,MISO,PCINT3)"/>
+<pinref part="JUM2" gate="JUM" pin="4"/>
+<wire x1="215.9" y1="149.86" x2="228.6" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="P_MOSI" class="0">
@@ -2142,6 +2152,11 @@ at 27/07/2012 14:02:49</description>
 <pinref part="R1" gate="R" pin="2"/>
 <wire x1="43.18" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
 <label x="45.72" y="63.5" size="1.016" layer="95" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PB2(PDI,MOSI,PCINT2)"/>
+<pinref part="JUM2" gate="JUM" pin="3"/>
+<wire x1="215.9" y1="152.4" x2="228.6" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V_P" class="0">
@@ -2358,27 +2373,6 @@ at 27/07/2012 14:02:49</description>
 <pinref part="U1" gate="A" pin="PB0(!SS,PCINT0)"/>
 <pinref part="JUM2" gate="JUM" pin="1"/>
 <wire x1="215.9" y1="157.48" x2="228.6" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB1(SCLK,PCINT1)"/>
-<pinref part="JUM2" gate="JUM" pin="2"/>
-<wire x1="215.9" y1="154.94" x2="228.6" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB2(PDI,MOSI,PCINT2)"/>
-<pinref part="JUM2" gate="JUM" pin="3"/>
-<wire x1="215.9" y1="152.4" x2="228.6" y2="152.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="PB3(PDO,MISO,PCINT3)"/>
-<pinref part="JUM2" gate="JUM" pin="4"/>
-<wire x1="215.9" y1="149.86" x2="228.6" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
